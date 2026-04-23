@@ -104,7 +104,7 @@ The application was successfully deployed to a two-node Kubernetes cluster consi
 
 ##Accessing the Application
 Browser Access via NodePort
-	http://<worker-node-ip>:32507
+	[http://<worker-node-ip>:32507] Connect: (http://129.114.26.191:32507)
 Secure Access via SSH Tunnel (Recommended)
 	ssh -i groupfinalproject.pem -L 8080:10.56.2.164:32507 cc@129.114.26.177
 Then open:
