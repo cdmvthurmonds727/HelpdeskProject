@@ -1,6 +1,8 @@
 # Help Desk Ticket System – Full Project
-A cloud-ready **Help Desk Ticket System** developed as a final project for a Docker and Kubernetes course. This project demonstrates modern full-stack application deployment using containerization, orchestration, persistent storage, and multi-node infrastructure management.
-The system enables users to create, manage, update, and track support tickets through a web-based interface while showcasing best practices in DevOps and cloud-native architecture. Deployment validation and Kubernetes setup were completed on Chameleon Cloud. :contentReference[oaicite:0]{index=0}
+A cloud-ready **Help Desk Ticket System** developed as a final project for a Docker and Kubernetes course. 
+This project demonstrates modern full-stack application deployment using containerization, orchestration, persistent storage, and multi-node infrastructure management.
+The system enables users to create, manage, update, and track support tickets through a web-based interface while showcasing best practices in DevOps and cloud-native architecture. 
+Deployment validation and Kubernetes setup were completed on Chameleon Cloud. :contentReference[oaicite:0]{index=0}
 ---
 ## Executive Summary
 This project was designed to simulate a production-ready support platform using a three-tier architecture:
