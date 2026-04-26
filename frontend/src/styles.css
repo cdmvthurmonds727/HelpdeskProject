@@ -215,7 +215,7 @@ select {
   .main-grid {
     grid-template-columns: 1fr;
   }
-
+}
 .hero {
   display: flex;
   justify-content: space-between;
