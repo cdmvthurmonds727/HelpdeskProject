@@ -1,0 +1,48 @@
+# Helpdesk Prometheus + Grafana Monitoring Files
+
+These files add Prometheus and Grafana observability to the Help Desk Ticket System Kubernetes deployment.
+
+## Install
+
+```bash
+chmod +x monitoring/install-monitoring.sh
+./monitoring/install-monitoring.sh
+```
+
+## Backend changes
+
+```bash
+npm install prom-client
+cp backend/metrics.js <your-project>/backend/metrics.js
+```
+
+In your existing `app.js` or `server.js`:
+
+```js
+const { metricsMiddleware, metricsEndpoint } = require('./metrics');
+app.use(metricsMiddleware);
+app.get('/metrics', metricsEndpoint);
+```
+
+Add the ticket counters from `backend/app-metrics-example.js` to your existing create/update/delete ticket routes.
+
+## Kubernetes service requirement
+
+Your backend Service needs label `app: helpdesk-backend` and a port named `http` pointing to port `5000`.
+
+## Access
+
+Grafana: `http://<worker-node-ip>:32000`  
+Login: `admin / admin123`
+
+Prometheus: `http://<worker-node-ip>:32090`
+
+## Verify
+
+```bash
+kubectl get pods -n monitoring
+kubectl get servicemonitor -n monitoring
+kubectl get prometheusrule -n monitoring
+```
+
+Then open Prometheus > Status > Targets and confirm the Helpdesk backend target is UP.
