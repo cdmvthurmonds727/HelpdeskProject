@@ -78,5 +78,5 @@ kubectl apply -f k8s/ingress.yaml
 - Role-based access (user/admin/technician)
 - File attachments
 - Email notifications
-- Metrics with Prometheus/Grafana
+- Metrics with Prometheus/Grafana -- Updated 4-26-2026- New Feature
 - CI/CD with GitLab or GitHub Actions
