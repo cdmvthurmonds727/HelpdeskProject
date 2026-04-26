@@ -1,7 +1,7 @@
 import React, { useEffect, useMemo, useState } from 'react';
 
 const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
-
+const GRAFANA_URL = process.env.REACT_APP_GRAFANA_URL || 'http://129.114.26.191:32000/d/adc48tx/help-desk-system-e28093-operations-dashboard?orgId=1&from=now-24h&to=now&timezone=browser'
 const defaultForm = {
   title: '',
   description: '',
@@ -105,12 +105,23 @@ function App() {
       <header className="hero">
         <div>
           <p className="eyebrow">Cloud Project</p>
-          <h1>Help Desk Ticket System</h1>
+          <h1>Group12 Help Desk Ticket System</h1>
           <p className="subtext">A containerized React + Node + PostgreSQL application ready for Docker and Kubernetes deployment.</p>
         </div>
         <button className="refresh-btn" onClick={fetchTickets}>Refresh Tickets</button>
+	<div>
+	  <p>A containerized React + Node + PostgreSQL help desk app
+	  <a
+            href={GRAFANA_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="grafana-link"
+          >
+            📊 Open Grafana Dashboard
+          </a></p>
+        </div>
       </header>
-
+   
       <section className="stats-grid">
         <div className="stat-card"><span>Total</span><strong>{stats.total}</strong></div>
         <div className="stat-card"><span>Open</span><strong>{stats.open}</strong></div>

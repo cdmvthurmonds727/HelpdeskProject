@@ -4,8 +4,9 @@ metadata:
   name: postgres-pvc
   namespace: helpdesk
 spec:
+  storageClassName: manual
   accessModes:
     - ReadWriteOnce
   resources:
     requests:
-      storage: 2Gi
+      storage: 5Gi

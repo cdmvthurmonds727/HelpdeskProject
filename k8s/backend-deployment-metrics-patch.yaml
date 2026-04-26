@@ -1,0 +1,18 @@
+# Merge this into your backend Deployment if the container port is not named.
+# The ServiceMonitor expects a Service port named "http" that routes to port 5000.
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: helpdesk-backend
+  namespace: helpdesk
+spec:
+  template:
+    metadata:
+      labels:
+        app: helpdesk-backend
+    spec:
+      containers:
+        - name: backend
+          ports:
+            - name: http
+              containerPort: 5000

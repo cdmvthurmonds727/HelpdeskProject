@@ -1,0 +1,18 @@
+# Use this if your existing backend Service does not already have app: helpdesk-backend
+# and a named port called http. If you already have a backend Service, merge these labels/ports.
+apiVersion: v1
+kind: Service
+metadata:
+  name: helpdesk-backend
+  namespace: helpdesk
+  labels:
+    app: helpdesk-backend
+spec:
+  selector:
+    app: helpdesk-backend
+  ports:
+    - name: http
+      port: 5000
+      targetPort: 5000
+      protocol: TCP
+  type: ClusterIP

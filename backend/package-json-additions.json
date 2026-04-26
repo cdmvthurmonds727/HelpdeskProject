@@ -1,0 +1,6 @@
+{
+  "dependencies_to_add": {
+    "prom-client": "latest"
+  },
+  "install_command": "npm install prom-client"
+}
