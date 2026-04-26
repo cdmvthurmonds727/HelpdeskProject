@@ -106,9 +106,9 @@ function App() {
         <div className="hero-content">
           <p className="eyebrow">Cloud Project</p>
           <h1>Group12 Help Desk Ticket System</h1>
-	  #   <p className="subtext">
-	  #   A containerized React + Node + PostgreSQL application ready for Docker and Kubernetes deployment.
-	  #</p>
+	     <p className="subtext">
+	     A containerized React + Node + PostgreSQL application ready for Docker and Kubernetes deployment.
+	     </p>
  
           <a
             href={GRAFANA_URL}
