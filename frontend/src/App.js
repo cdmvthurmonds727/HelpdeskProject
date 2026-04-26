@@ -103,25 +103,27 @@ function App() {
   return (
     <div className="app-shell">
       <header className="hero">
-        <div>
+        <div className="hero-content">
           <p className="eyebrow">Cloud Project</p>
           <h1>Group12 Help Desk Ticket System</h1>
-          <p className="subtext">A containerized React + Node + PostgreSQL application ready for Docker and Kubernetes deployment.</p>
-        </div>
-        <button className="refresh-btn" onClick={fetchTickets}>Refresh Tickets</button>
-	<div>
-	  <p>A containerized React + Node + PostgreSQL help desk app
-	  <a
+          <p className="subtext">
+             A containerized React + Node + PostgreSQL application ready for Docker and Kubernetes deployment.
+          </p>
+ 
+          <a
             href={GRAFANA_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="grafana-link"
           >
             📊 Open Grafana Dashboard
-          </a></p>
+          </a>
         </div>
-      </header>
-   
+
+       <button className="refresh-btn" onClick={fetchTickets}>
+         Refresh Tickets
+       </button>
+     </header>
       <section className="stats-grid">
         <div className="stat-card"><span>Total</span><strong>{stats.total}</strong></div>
         <div className="stat-card"><span>Open</span><strong>{stats.open}</strong></div>
